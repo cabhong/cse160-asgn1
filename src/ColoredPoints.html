@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Draw a point (1)</title>
+  </head>
+
+  <body onload="main()">
+
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <img src="miku.jpg" width="400">
+
+    <div><button onclick="clearCanvas()">Clear Canvas</button></div>
+
+    <div>
+      <button onclick="shape = 0">Point</button>
+      <button onclick="shape = 1">Triangle</button>
+      <button onclick="shape = 2">Circle</button>
+      <button onclick="drawMiku()">Draw Picture</button>
+    </div>
+    
+
+    <div>
+      <p id="size">Size: 10</p>
+      <input type="range" value="10" oninput="handleSizeChange(event)" />
+      
+    </div>
+
+    <div>
+      <p>Red</p>
+      <input id="red" value="1" type="range" max ="1" min="0" step="any" oninput="handleColorChange(event)" />
+      <p>Green</p>
+      <input id="green" value="1" type="range" type="range" max ="1" min="0" step="any" oninput="handleColorChange(event)" />
+      <p>Blue</p>
+      <input id="blue" value="1" type="range" type="range" max ="1" min="0" step="any" oninput="handleColorChange(event)" />
+      
+    </div>
+
+    <p>Segments</p>
+    <input id="segments" value="10" type="range" type="range" max ="20" min="0" step="any" oninput="handleSegmentsChange(event)" />
+      
+    <p>Casey Hong</p>
+    <p>cabhong@ucsc.edu</p>
+    <p>Notes</p>
+    <ul>
+      <li>Added a function to render top half or bottom half of circles, used in head, hair, and mouth</li>
+      <li>Made a little <a href="Gridshot.html">aim trainer<a></li>
+    </ul>
+
+    
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="ColoredPoints.js"></script>
+    <script src="Point.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Miku.js"></script>
+  </body>
+</html>

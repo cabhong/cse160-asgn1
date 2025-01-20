@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="gridshot.css">
+    <meta charset="utf-8" />
+    <title>Draw a point (1)</title>
+  </head>
+
+  <body onload="gridshot_main()">
+    <div class="container">
+        <div>
+            <canvas id="webgl" width="700" height="700" >
+            Please use a browser that supports "canvas"
+            </canvas>
+            <div class="overlay">
+                <p id="time">Timer: </p>
+                <p id="score">Score: </p>
+                <p id="high_score">High Score: </p>
+            </div>
+        </div>
+        
+        
+        <button onclick="start_run()">Start</button>
+        <p>Press R to reset</p>
+        <a href="ColoredPoints.html">Back</a>
+    </div>
+    
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="ColoredPoints.js"></script>
+    <script src="Gridshot.js"></script>
+    <script src="Point.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+  </body>
+</html>
